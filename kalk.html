@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Калькулятор расчета экономической эффективности</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<script>
+		function addition() {
+			var a = parseInt(document.getElementById('a').value);
+			var b = parseInt(document.getElementById('b').value);
+ 
+			if (isNaN(a)==true) a=0;
+			if (isNaN(b)==true) b=0;
+ 
+			var x = a / 30 * b * 256;
+ 
+			document.getElementById('result').innerHTML = x;
+		}
+</script>
+	</head>
+	<body>
+   <p id="pyp">Калькуляторы расчета экономической эффективности</p>
+ <ul>
+       <li><a href="https://corp.akbars.ru/ru/html/login.html">БАНК</a></li>
+       <li><a href="нсат.html">СЕРВИСЫ</a></li> 
+       <li><a href="#">ПАРТНЕРЫ</a></li>
+       <li><a href="#">КОНТРАГЕНТЫ</a></li>
+	<li><a href="#">ПОМОЩНИК</a></li>
+       <li><a href="osnov.html">ВЕРНУТЬСЯ ОБРАТНО</a></li>
+    </ul>
+<p id="jij">Расчет эффективности электронного докуметооборота</p>
+		<form>
+			<p id="popo"> Месячный доход </p>
+			<input id="a" type="text" value="45">
+			<p id="popo"> Количество договоров</p>
+			<input id="b" type="text" value="54"><br>
+			<input type="button" value="Расчитать доход" onclick="addition();"><br>
+			
+		</form>
+<p id="result">Экономия составит:</p>
+	<div id="result"></div>
+	</body>
+</html>
